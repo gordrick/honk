@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package honk;
+
+option go_package = "github.com/gordrick/honk/pkg/pb/honk";
+
+service HonkService {
+  rpc Honk (HonkRequest) returns (HonkResponse) {}
+}
+
+
+message HonkRequest {
+}
+
+message HonkResponse {
+  string message = 1;
+}
